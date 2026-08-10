@@ -1,0 +1,102 @@
+hallo
+4 hour video
+
+data types
+    _> premitive
+        _> decimal
+            _> int 
+            _> char
+        _> floating 
+            _> float
+            _> double 
+        _> void
+    _> non premitive 
+        _> array
+        _> function
+        _> pointer 
+
+pointer -> data type 
+            _> to store address
+types : 
+    [pointer to object] 
+        1.pointer to var int
+        2.pointer to var char
+        3.pointer to var float
+        4.pointer to var double
+        5.pointer to var array
+        6.pointer to var struct
+        7.pointer to var union
+        8.pointer to var string
+        9.pointer to var pointer
+
+note : size of pointer ?
+    any type is fixed size the same of system bus
+|*********************|
+| PROCSCCOR           |  system bus 
+|   /\                |  _> its the number of wires connecting 
+|   ||                |      between proceessor and memory
+|   ||  <- system bus |      where its 64 bits or 32 bits
+|   ||                |      and that determines size of int or pointer
+|   \/                |     
+| MEMMORY             |
+|*********************|
+=============================================================================
+
+memory store :
+    local poinetr  -> in stack
+    global pointer -> data segment
+decleartation :
+    <pointee type> * <pointer name>
+    -> for array ? 
+    <pointee type> * <pointer name> [size] 
+defination : 
+    <pointee type> * <pointer name> = intial value
+assignation : 
+    <pointer name> = &<name of var> 
+        _> that to store addresss (address of x)
+    * <pointer name> =  value 
+        _> that to change value stored in the address (value of x)
+        note : the * here is called derfrance
+|*************************|
+| ptr  -> addresss of var |
+| *ptr -> value of var    |
+| &ptr -> adresss of ptr  |
+|*************************|
+
+=============================================================================
+function calling 
+    _> call by value : copy data 
+        ex : int add (int x , int y)
+            we open block in main with no1 and no2 with like 5 and 10
+            and then take no1 and put it in x so its 5 now
+            same with y till now x and y have the same value of no1 no2
+    _> call by refernce : send adddress insted of value
+        ex : void incremnet (int * x)
+            now we update the value of x inside the main
+            without takeing a copy of it but we change the real one
+note : name of fucntion is its addresss 
+
+    _> pointer to fucttion
+        first the fucntion must have the return type 
+        and the paramaters of the fuctnion 
+        so like this 
+        int Add (int x, int y)
+        -> pointer creattion :
+            int (*PF) (int , int) = Add;
+note : you cant do *PF = ... cause its pointng to someing in ROM not RAM
+=============================================================================
+pointer operation 
+    we can do ptr + 1 
+    -> what does that do ?
+        it moves 1 step 
+        and the step move by the amount of its data tyoe
+        so if its int
+        and we are on 0x00
+        we move to    0x04 
+        we move 4 bytes cause the int is 4 bytes
+    and in array ofc it moves to next element in the array
+    -> so how we do it for 2d aarray?
+        *(*(arr+X)+Y) 
+        x -> row
+        y -> column 
+        so if we want something like Arr[1][2] : *(*(arr+1)+2)
