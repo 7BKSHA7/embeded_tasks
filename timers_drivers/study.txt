@@ -1,0 +1,217 @@
+hallo
+this is the timer summery for timer0 in datashhet atmega32 page 84 
+
+first 
+    there are 3 timers / counters in the atmega32 and its timer0 /timer1/timer2 
+    all 3 share the same [prescaler module]
+    because we are a RISC type most instructions are done in 1 clock cycle
+    and we have 3 types of delays 
+    busy waiting / timer / RTOS
+    ofc busy waiting is bad cause we stop the use of the MICROPROCESSOR
+    so we use the timer 
+    we mesure it in ticks : prescaller / system frequency
+    and cause according to the tiemr we use (like timer0) 
+    which has 8 bits so to know the TIME knowing the number of ticks
+    we do {2^n * tick time} 
+
+_> there are 2 source clocks avalabile 
+    1. internal :
+        by setting CSn2:0 = 1 we activate the internal clock
+        and using a prescaler so its Fclk / 8  or /64 /256 /1024
+    meaning : "Free running" 
+        _> means the prescaler counts continuously on its own
+        driven directly by the system clock
+        completely independent of what the Timer/Counter is doing 
+        It doesn't care whether timer0 or timer 1 is enbaled /disapled
+        it just keeps ticking
+    2. extrenal :
+        by appling a clock to pin T1/T0 [PB1/PB0]
+        they are sampled once each system clock cycle 
+        _>ther is Synchronization : because the signal is asynccrouns to the chip
+          internal clock
+        _>there is an edge detector: its there to genearte a clean pulse
+        if  (CSn2:0 = 7) for postive
+        and (CSn2:0 = 6) for negative
+        each period must be logner than the system clock to ensure 
+        correct smalping and no loss of clock cycles
+note : there is a cost to the synchronization and that is a dealy 
+        of 2.5 to 3.5 system clock cycles
+       external clock [cant] be prescaled 
+        maximum frequency of an external clock source is less than fclk/2.5.
+_> timer modes in general :
+    1. overflow mode : 
+    _> first the overflow mode which it jsut counts from 0 to 255
+    when it reaches 255 does a overflow evnt and then returns to 0 and start counting again 
+        so after we set our prescaler and our system frequency
+        _> there are 3 cases to each one of these events
+        1. time = Overflow time (best case) 
+            _> ISR happens after ovf time normaly 
+        2. time > overflow time 
+            _> first we calualte how many time does it have to repeat
+            so we do {time / overflow time} = no of overflows 
+                _> there are 2 cases : 
+                1. normal number : 
+                    we do counter and it inc each time it reach the overflow 
+                    and we do counter++ till we reach the specifcied number 
+                    remeber : dont forget to resst the counter =0 again to repeat it 
+                2. fraction number : 
+                    we set a preload value so the counter start from a specifc number
+                    but we increase its overflow times so it counts the correct number of times
+                    to calualte it : (y is the rest of the fraction)
+                        (1-0.y) * 2^n  
+        3. time < overflow time 
+            _> like the previous action we calualte it and it must be fraction
+            insted of makeing counter = 0 each time we just set the timer register to preload value
+            and each time its called it just starts from the preload value insted of 0 till it raech 
+            overflow then it excutes the code then repeates
+
+example test : 
+    n = 10 bits , f_sys = 8mhz , presc = 8 , t_req = 5 sec 
+    1. tick time = pre / f_sys = 8 / 8m = 1uS 
+    2. t_ovf = 2^n * T.t = 2^10 * 1uS = 1024uS
+    3. see what case : 5 sec > 1024 uS 
+    4. no of OVFs : t_req / t_ovf = 5 / 1024 * 10^-6 = 4882.8
+        so no of OVFs = 4883 <-- here we incsreased by 1 
+        and set preload value (1-0.8) * 1024 = 192
+        so set preload value to = 192 
+
+    2.compare match mode
+    _> the ctc mode is more accurate than the normal mode by haveing a preload value insted of going up to the 255 we go 
+    up to the number we put in the OCR so each time it reachs the OCR (a compare match event occuers)
+    so when TCNT0 = OCR -> TIFR flag {OCF0} becomes 1 (ofc if the interput is enabled {OCIE0} its read)  
+    _> also we control a pin on the MC (OC0 , OC1A , OC1B , OC2) when a compare match event is done
+    the ISR exucutes and also a signal in sent to these pins
+    note : when the compare match event is done the TCNT is cleard on compare match
+    _> CTC mode time calculation 
+    compare time = tick time * compare value (assume it) 
+        _> rules of assuming : 
+            1. less than 2^n
+            2. must be decimal
+    no of compares = req_time / compare_time
+======================================================================================
+
+special fucntion IO register - SFIOR (0x50) 
+    we only need the bit 0 the PSR10 : 
+        _> the prescaler resset for timer0 and timer1
+            when its 1 the presclaer is rest 
+
+timer0 : 
+    _> the prescaler is 10 bits 
+    there is a BOTTOM which is 0x00 and its in TCNT0
+    and it reaches MAX which is 0xFF (255) in TCNT0
+    and there is TOP which is the value determined in the OCR0 register
+    _>from th Tn pin it goes to edge detector 
+    and with a presclaer it goes to the control logic
+    where then it outputs in TCNTn
+    _>The counting sequence is determined by the setting of the WGM01 and WGM00 
+    that are located in TCCR0
+    _> the TOV0 is the timer overflow 
+output compare unit : the OCR0 and the TCNT0 are [equal] the OCF0 (output compare flag)
+    is set (1) and its also set from the WGM00 WGM01 
+    and the OCIE0 is now 1 cause its a interput enable 
+    so if OCIE0 is 1 and a match is occuerd and GIE is enableed
+    then do an interput ISR 
+    the FORCE output compare FOC0 forcing a bit to make it as if a match occuerd
+    the FOC is only for overflow or ctc (so no PWM)
+modes of operation :  
+
+Table 38. Waveform Generation Mode Bit Description
+
+Mode | WGM01 (CTC0) | WGM00 (PWM0) | Timer/Counter Mode of Operation | TOP  | Update of OCR0 | TOV0 Flag Set-on
+-----|--------------|--------------|-------------------------------|------|----------------|-----------------
+0    | 0            | 0            | Normal Mode                    | 0xFF | Immediate      | MAX
+1    | 0            | 1            | PWM, Phase Correct             | 0xFF | TOP            | BOTTOM
+2    | 1            | 0            | CTC Mode                       | OCR0 | Immediate      | MAX
+3    | 1            | 1            | Fast PWM                       | 0xFF | BOTTOM         | MAX
+
+Table 39. Compare Output Mode, non-PWM Mode
+
+COM01 | COM00 | Description
+------|-------|------------------------------------------
+0     | 0     | Normal port operation, OC0 disconnected.
+0     | 1     | Toggle OC0 on compare match
+1     | 0     | Clear OC0 on compare match
+1     | 1     | Set OC0 on compare 
+
+Table 40. Compare Output Mode, Fast PWM Mode
+
+COM01 | COM00 | Description
+------|-------|---------------------------------------------------------------
+0     | 0     | Normal port operation, OC0 disconnected.
+0     | 1     | Reserved
+1     | 0     | Clear OC0 on compare match, set OC0 at BOTTOM (non-inverting mode)
+1     | 1     | Set OC0 on compare match, clear OC0 at BOTTOM (inverting mode)
+
+Table 42. Clock Select Bit Description
+
+CS02 | CS01 | CS00 | Description
+-----|------|------|-----------------------------------------------
+0    | 0    | 0    | No clock source (Timer/Counter stopped).
+0    | 0    | 1    | clkI/O (No prescaling)
+0    | 1    | 0    | clkI/O/8 (From prescaler)
+0    | 1    | 1    | clkI/O/64 (From prescaler)
+1    | 0    | 0    | clkI/O/256 (From prescaler)
+1    | 0    | 1    | clkI/O/1024 (From prescaler)
+1    | 1    | 0    | External clock source on T0 pin. Clock on falling edge.
+1    | 1    | 1    | External clock source on T0 pin. Clock on rising edge.
+
+and TIMSK bit 1 : output comapre match interput enable
+    0x59  bit 0 : overflow interput enable 
+    TIFR  bit 1 : output flag 0
+    0x58  bit 0 : overflow flag 
+
+timer1 : 
+    its 16 bits insted of 8 so it goes up to 65535
+    timer 1 regsiters are spilt into 2s
+    so its 
+    TCCR1A 0x4F bit 7 : 6 compare output match A
+                bit 5 : 4 compare output match B
+    TCCR1B 0x4E
+    TCNT1H 0x4D
+    TCNT1L 0x4C
+    OCR1AH 0x49
+    OCR1BL 0x48
+    ICR1H  0x47
+    ICR1L  0x46
+    but its shared TIMSK and TIFR still
+
+    so it goes from 0x0000 to 0xFFFF
+Table 47. Waveform Generation Mode Bit Description
+==> reg      7       6     5      4       3    2     1     0 
+==> TCCR1A COM1A1 COM1A0 COM1B1 COM1B0 FOC1A FOC1B WGM11 WGM10
+==> TCCR1B ICNC1  ICES1    –    WGM13  WGM12  CS12  CS11   CS10 
+Mode | WGM13 | WGM12 (CTC1) | WGM11 (PWM11) | WGM10 (PWM10) | Timer/Counter Mode of Operation     | TOP   | Update of OCR1x | TOV1 Flag Set on
+-----|-------|--------------|---------------|---------------|-------------------------------------|-------|-----------------|------------------
+0    | 0     | 0            | 0             | 0             | Normal                              | 0xFFFF| Immediate       | MAX
+1    | 0     | 0            | 0             | 1             | PWM, Phase Correct, 8-bit           | 0x00FF| TOP             | BOTTOM
+2    | 0     | 0            | 1             | 0             | PWM, Phase Correct, 9-bit           | 0x01FF| TOP             | BOTTOM
+3    | 0     | 0            | 1             | 1             | PWM, Phase Correct, 10-bit          | 0x03FF| TOP             | BOTTOM
+4    | 0     | 1            | 0             | 0             | CTC                                 | OCR1A | Immediate       | MAX
+5    | 0     | 1            | 0             | 1             | Fast PWM, 8-bit                     | 0x00FF| BOTTOM          | TOP
+6    | 0     | 1            | 1             | 0             | Fast PWM, 9-bit                     | 0x01FF| BOTTOM          | TOP
+7    | 0     | 1            | 1             | 1             | Fast PWM, 10-bit                    | 0x03FF| BOTTOM          | TOP
+8    | 1     | 0            | 0             | 0             | PWM, Phase and Frequency Correct    | ICR1  | BOTTOM          | BOTTOM
+9    | 1     | 0            | 0             | 1             | PWM, Phase and Frequency Correct    | OCR1A | BOTTOM          | BOTTOM
+10   | 1     | 0            | 1             | 0             | PWM, Phase Correct                  | ICR1  | TOP             | BOTTOM
+11   | 1     | 0            | 1             | 1             | PWM, Phase Correct                  | OCR1A | TOP             | BOTTOM
+12   | 1     | 1            | 0             | 0             | CTC                                 | ICR1  | Immediate       | MAX
+13   | 1     | 1            | 0             | 1             | Reserved                            | -     | -               | -
+14   | 1     | 1            | 1             | 0             | Fast PWM                            | ICR1  | BOTTOM          | TOP
+15   | 1     | 1            | 1             | 1             | Fast PWM                            | OCR1A | BOTTOM          | TOP
+
+Table 44. Compare Output Mode, non-PWM
+
+COM1A1/COM1B1 | COM1A0/COM1B0 | Description
+---------------|---------------|--------------------------------------------------------------
+0              | 0              | Normal port operation, OC1A/OC1B disconnected.
+0              | 1              | Toggle OC1A/OC1B on compare match
+1              | 0              | Clear OC1A/OC1B on compare match (Set output to low level)
+1              | 1              | Set OC1A/OC1B on compare match (Set output to high level)
+Note:
+1. The CTC1 and PWM11:0 bit definition names are obsolete.
+   Use the WGM12:0 definitions. However, the functionality and
+   location of these bits are compatible with previous versions of the timer.
+
+notes while writing the code: 
+    the preload value / compare match value must be set to u16 not u8 cause the regisgers are 2 bytes not 1
+    
