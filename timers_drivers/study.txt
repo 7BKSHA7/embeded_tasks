@@ -214,4 +214,99 @@ Note:
 
 notes while writing the code: 
     the preload value / compare match value must be set to u16 not u8 cause the regisgers are 2 bytes not 1
-    
+
+======================================================================================
+
+PWM mode : (pulse width modulation)
+    _> what is pwm ? 
+    pwm is a mode in timer to allow us to control the intensty of voltage we output insted of 0V or 5V
+    it outputs a value in a from of a signal that we control the width of each pulse 
+    some conecpts to understand : 
+        1. perodic time : the time of 1 cycle 
+        2. frequency : no of pusles in 1 sec
+        3. on time : time where the pulse is high
+        4. off time : time where the pulse is low 
+        5. duty cycle : ratio between on time and perodic time (dont forget to * 100 )
+        6. amplitude : maximum volt when signal is high
+        7. V_rms : amplitude *  root(duty cycle)
+    pwm in embeded : 
+        1. communcation : you can have 2 MCUs talking to each other where the 
+            first mcu send the pulse through the pwm and the 2nd mcu recives it from the ICU (input capture unit) ((read input signal))
+            where both mcus aggre on some rules where if you recive frequency x and duty cycle y then in the 2nd mcu do something
+        2. RMS : by controling the duty cycle now we can control the value of RMS the is outputed form the MCU
+    how to generate PWM
+        _> using software 
+            1. using delay :
+                for ex do motor_on() then delay(time_on) then motor_off() then delay(time_off)
+            2. using normal/ctc :
+                if we put a compare value in the compare register : 2 flags are rissen
+                and in the isr overflow we can call it each 10uS and we do a counter till we reach our specifed numbers
+        _> using hardware :
+            our timer already has a hardware circuit to control the output value 
+            first : fast pwm (normal mode)
+            |what happens if in ctc Mode                        {timer reg}   <-- TCNT
+            |when the tcnt = ocr a flag is rissen                   = 
+            |then the register is cleard                        {compare reg} <-- OCR
+            |but what if we wanted it to not be cleard           ||
+            |                                               OC0 <| (hardware pin)
+            so it reaches maximum like normal but when a match is occued 
+            insted of clearing we do a {change} and when we reach max again we change the OC0 again
+            so OC0 is changed twice 
+                _> once on compare match
+                _> 2nd when overflow occorus (reaches maximum)
+
+        TOP ─────────────────────────────
+             /│          /│          /│
+            / │         / │         / │
+           /  │        /  │        /  │
+COMPARE ──●───│───────●───│────────●──│──
+         /│   │      /│   │       /│   │
+        / │   │     / │   │      / │   │
+       /  │   │    /  │   │     /  │   │
+BOTTOM ───┴───────┴─────────────┴──────────→ time
+
+if we are doing first assumtion of (clear/set)
+        ON_time  : comapre value * clk time 
+        perodic = overflow time : clk time * 2^n
+        duty cycle : ON_time / perodic 
+            _> compare value / 2^n <---- note : this is non inverting (means we clear on compare | set on maxium | and we use this rule)
+            _> compare value = duty cycle * 2^n
+    but if we do 2nd assumtion of (set/clear)
+        ON_time : overflow time - compare time 
+        perodic : overflow time 
+        duty cucle : ON_time / perodic
+            _> 1 - (compare value / 2^n ) <---- this is inverting mode (means we set on compare | clear on maxium)
+            _> compare value = 2^n * (1-duty cycle) 
+
+phase correct mode : 
+    insted of the old graph we do this
+TOP ────────────────/\────────────────/\──────────────
+                   /  \              /  \
+                  /    \            /    \
+                 /      \          /      \
+COMPARE ────────●────────●────────●────────●─────────
+               /          \      /          \
+              /            \    /            \
+             /              \  /              \
+BOTTOM ─────┴────────────────\/────────────────┴─────→ time
+
+        X
+   ┌──────────┐                         ┌───────────────┐
+   │          │                         │               │          |
+   │          │                         │    on time    │          |
+   │          │                         │               │          |
+   │          │                         │               │          |
+   │          └─────────────────────────┘               │          |
+   │                                                    └──────────|
+   │
+───┴──────────────────────────────────────────────────────────────→ time
+
+the real on time is the short one
+
+here happnes 2 flags (we have inverting and non inverting too)
+    _> 1. first compare
+    _> 2. 2nd compare
+    so the duty cylce is comparevalue / 2^n
+    that is non inverting
+    and in inverting 
+    1 - (compare value / 2^n )
