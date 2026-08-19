@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1808	      0	      8	   1816	    718	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task3\FIRMWARE\release\task_3.elf
