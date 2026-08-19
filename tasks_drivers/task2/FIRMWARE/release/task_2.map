@@ -31,6 +31,7 @@ LOAD C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\
 LOAD C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\main.c.o
 LOAD C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\ADC\ADC_program.c.o
 LOAD C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\DIO\DIO_program.c.o
+LOAD C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\GIE\GIE_Program.c.o
 LOAD C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\TIMER0\TIMER0_program.c.o
 START GROUP
 LOAD C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a
@@ -138,7 +139,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x6ea
+.text           0x00000000      0x6fe
  *(.vectors)
  .vectors       0x00000000       0x54 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -241,83 +242,86 @@ END GROUP
                 0x000002fc                DIO_set_group_direction
                 0x0000031c                DIO_set_group_value
                 0x0000033c                DIO_get_group_value
- .text          0x00000360      0x29a C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\TIMER0\TIMER0_program.c.o
-                0x00000360                TIMER0_init
-                0x0000048c                TIMER0_start
-                0x000004d2                TIMER0_stop
-                0x000004da                TIMER0_set_preload
-                0x000004de                TIMER0_set_compare_value
-                0x000004e2                TIMER0_set_duty_cycle
-                0x0000052e                TIMER0_set_call_back_fucntion
-                0x00000556                __vector_10
-                0x000005a8                __vector_11
- .text          0x000005fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
- .text          0x000005fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
- .text          0x000005fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text          0x000005fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
-                0x000005fa                        . = ALIGN (0x2)
+ .text          0x00000360       0x10 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\GIE\GIE_Program.c.o
+                0x00000360                GIE_Enable
+                0x00000368                GIE_Disable
+ .text          0x00000370      0x29a C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\TIMER0\TIMER0_program.c.o
+                0x00000370                TIMER0_init
+                0x0000049c                TIMER0_start
+                0x000004e2                TIMER0_stop
+                0x000004ea                TIMER0_set_preload
+                0x000004ee                TIMER0_set_compare_value
+                0x000004f2                TIMER0_set_duty_cycle
+                0x0000053e                TIMER0_set_call_back_fucntion
+                0x00000566                __vector_10
+                0x000005b8                __vector_11
+ .text          0x0000060a        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+ .text          0x0000060a        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x0000060a        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .text          0x0000060a        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000060a                        . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x000005fa       0x8a C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\main.c.o
-                0x000005fa                main
+ .text.startup  0x0000060a       0x8e C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\main.c.o
+                0x0000060a                main
  .text.libgcc.mul
-                0x00000684       0x1e C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
-                0x00000684                __umulhisi3
+                0x00000698       0x1e C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+                0x00000698                __umulhisi3
  .text.libgcc.div
-                0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
- .text.libgcc   0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .text.libgcc.prologue
-                0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .text.libgcc.builtins
-                0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .text.libgcc.fmul
-                0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .text.libgcc.fixed
-                0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .text.libgcc.mul
-                0x000006a2        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006b6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.div
-                0x000006a2       0x44 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
-                0x000006a2                __udivmodsi4
- .text.libgcc   0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006b6       0x44 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006b6                __udivmodsi4
+ .text.libgcc   0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.prologue
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.builtins
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.fmul
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.fixed
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
  .text.libgcc.mul
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
-                0x000006e6                        . = ALIGN (0x2)
+                0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x000006fa                        . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000006e6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
-                0x000006e6                _exit
-                0x000006e6                exit
+ .fini9         0x000006fa        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000006fa                _exit
+                0x000006fa                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -336,17 +340,17 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000006e6        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000006fa        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
  *(.hightext)
  *(.hightext*)
  *(.progmemx.*)
-                0x000006ea                        . = ALIGN (0x2)
+                0x000006fe                        . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
-                0x000006ea                        _etext = .
+                0x000006fe                        _etext = .
 
-.data           0x00800060        0x0 load address 0x000006ea
+.data           0x00800060        0x0 load address 0x000006fe
                 [!provide]                        PROVIDE (__data_start = .)
  *(.data)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
@@ -355,6 +359,7 @@ END GROUP
  .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\main.c.o
  .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\ADC\ADC_program.c.o
  .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\DIO\DIO_program.c.o
+ .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\GIE\GIE_Program.c.o
  .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\TIMER0\TIMER0_program.c.o
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
@@ -378,6 +383,7 @@ END GROUP
  .bss           0x00800060        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\main.c.o
  .bss           0x00800060        0x1 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\ADC\ADC_program.c.o
  .bss           0x00800061        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\DIO\DIO_program.c.o
+ .bss           0x00800061        0x0 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\GIE\GIE_Program.c.o
  .bss           0x00800061        0x5 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\TIMER0\TIMER0_program.c.o
  .bss           0x00800066        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_umulhisi3.o)
  .bss           0x00800066        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_udivmodsi4.o)
@@ -386,8 +392,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 0x00800066                        PROVIDE (__bss_end = .)
-                0x000006ea                        __data_load_start = LOADADDR (.data)
-                0x000006ea                        __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000006fe                        __data_load_start = LOADADDR (.data)
+                0x000006fe                        __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800066        0x0
                 [!provide]                        PROVIDE (__noinit_start = .)
@@ -440,6 +446,7 @@ END GROUP
  .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\main.c.o
  .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\ADC\ADC_program.c.o
  .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\DIO\DIO_program.c.o
+ .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\GIE\GIE_Program.c.o
  .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\MCAL\TIMER0\TIMER0_program.c.o
 
 .note.gnu.avr.deviceinfo

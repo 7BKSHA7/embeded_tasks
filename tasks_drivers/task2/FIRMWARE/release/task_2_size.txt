@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-   1770	      0	      6	   1776	    6f0	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\task_2.elf
+   1790	      0	      6	   1796	    704	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task2\FIRMWARE\release\task_2.elf

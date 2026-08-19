@@ -2,6 +2,7 @@
 #include "MCAL/TIMER0/TIMER0_interface.h"
 #include "HAL/PET/PET_interface.h"
 #include "HAl/LED/LED_Interface.h"
+#include "MCAL/GIE/GIE_Interface.h"
 
 #include <util/delay.h>
 void main()
@@ -19,6 +20,7 @@ void main()
     TIMER0_init(config_main_t);
     TIMER0_start(config_main_t);
     PET_init();
+    GIE_Enable();
 
     while(1)
     {
