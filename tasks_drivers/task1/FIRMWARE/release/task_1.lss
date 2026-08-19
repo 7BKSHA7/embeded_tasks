@@ -1,0 +1,455 @@
+
+C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task1\FIRMWARE\release\task_1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000284  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00000284  000002f8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      0000002f  00000000  00000000  000002f8  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000328  2**2
+                  CONTENTS, READONLY, OCTETS
+  4 .debug_info   000004e6  00000000  00000000  00000364  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_abbrev 000004a3  00000000  00000000  0000084a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_line   0000001d  00000000  00000000  00000ced  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    00000196  00000000  00000000  00000d0a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 2d 01 	call	0x25a	; 0x25a <main>
+  64:	0c 94 40 01 	jmp	0x280	; 0x280 <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <DIO_set_pin_direction>:
+  6c:	84 30       	cpi	r24, 0x04	; 4
+  6e:	20 f4       	brcc	.+8      	; 0x78 <.L1>
+  70:	68 30       	cpi	r22, 0x08	; 8
+  72:	10 f4       	brcc	.+4      	; 0x78 <.L1>
+  74:	42 30       	cpi	r20, 0x02	; 2
+  76:	08 f0       	brcs	.+2      	; 0x7a <.L11>
+
+00000078 <.L1>:
+  78:	08 95       	ret
+
+0000007a <.L11>:
+  7a:	21 e0       	ldi	r18, 0x01	; 1
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.L2^B1>
+
+0000007e <.L1^B1>:
+  7e:	22 0f       	add	r18, r18
+
+00000080 <.L2^B1>:
+  80:	6a 95       	dec	r22
+  82:	ea f7       	brpl	.-6      	; 0x7e <.L1^B1>
+  84:	41 30       	cpi	r20, 0x01	; 1
+  86:	79 f0       	breq	.+30     	; 0xa6 <.L12>
+  88:	20 95       	com	r18
+  8a:	82 30       	cpi	r24, 0x02	; 2
+  8c:	b1 f0       	breq	.+44     	; 0xba <.L7>
+  8e:	83 30       	cpi	r24, 0x03	; 3
+  90:	31 f0       	breq	.+12     	; 0x9e <.L8>
+  92:	81 30       	cpi	r24, 0x01	; 1
+  94:	b1 f0       	breq	.+44     	; 0xc2 <.L9>
+  96:	8a b3       	in	r24, 0x1a	; 26
+  98:	82 23       	and	r24, r18
+  9a:	8a bb       	out	0x1a, r24	; 26
+  9c:	08 95       	ret
+
+0000009e <.L8>:
+  9e:	81 b3       	in	r24, 0x11	; 17
+  a0:	82 23       	and	r24, r18
+  a2:	81 bb       	out	0x11, r24	; 17
+  a4:	08 95       	ret
+
+000000a6 <.L12>:
+  a6:	82 30       	cpi	r24, 0x02	; 2
+  a8:	c1 f0       	breq	.+48     	; 0xda <.L4>
+  aa:	83 30       	cpi	r24, 0x03	; 3
+  ac:	91 f0       	breq	.+36     	; 0xd2 <.L5>
+  ae:	81 30       	cpi	r24, 0x01	; 1
+  b0:	61 f0       	breq	.+24     	; 0xca <.L6>
+  b2:	8a b3       	in	r24, 0x1a	; 26
+  b4:	82 2b       	or	r24, r18
+  b6:	8a bb       	out	0x1a, r24	; 26
+  b8:	08 95       	ret
+
+000000ba <.L7>:
+  ba:	84 b3       	in	r24, 0x14	; 20
+  bc:	82 23       	and	r24, r18
+  be:	84 bb       	out	0x14, r24	; 20
+  c0:	08 95       	ret
+
+000000c2 <.L9>:
+  c2:	87 b3       	in	r24, 0x17	; 23
+  c4:	82 23       	and	r24, r18
+  c6:	87 bb       	out	0x17, r24	; 23
+  c8:	08 95       	ret
+
+000000ca <.L6>:
+  ca:	87 b3       	in	r24, 0x17	; 23
+  cc:	82 2b       	or	r24, r18
+  ce:	87 bb       	out	0x17, r24	; 23
+  d0:	08 95       	ret
+
+000000d2 <.L5>:
+  d2:	81 b3       	in	r24, 0x11	; 17
+  d4:	82 2b       	or	r24, r18
+  d6:	81 bb       	out	0x11, r24	; 17
+  d8:	08 95       	ret
+
+000000da <.L4>:
+  da:	84 b3       	in	r24, 0x14	; 20
+  dc:	82 2b       	or	r24, r18
+  de:	84 bb       	out	0x14, r24	; 20
+  e0:	08 95       	ret
+
+000000e2 <DIO_set_pin_value>:
+  e2:	84 30       	cpi	r24, 0x04	; 4
+  e4:	20 f4       	brcc	.+8      	; 0xee <.L13>
+  e6:	68 30       	cpi	r22, 0x08	; 8
+  e8:	10 f4       	brcc	.+4      	; 0xee <.L13>
+  ea:	42 30       	cpi	r20, 0x02	; 2
+  ec:	08 f0       	brcs	.+2      	; 0xf0 <.L22>
+
+000000ee <.L13>:
+  ee:	08 95       	ret
+
+000000f0 <.L22>:
+  f0:	21 e0       	ldi	r18, 0x01	; 1
+  f2:	01 c0       	rjmp	.+2      	; 0xf6 <.L2^B2>
+
+000000f4 <.L1^B2>:
+  f4:	22 0f       	add	r18, r18
+
+000000f6 <.L2^B2>:
+  f6:	6a 95       	dec	r22
+  f8:	ea f7       	brpl	.-6      	; 0xf4 <.L1^B2>
+  fa:	41 30       	cpi	r20, 0x01	; 1
+  fc:	79 f0       	breq	.+30     	; 0x11c <.L23>
+  fe:	20 95       	com	r18
+ 100:	82 30       	cpi	r24, 0x02	; 2
+ 102:	b1 f0       	breq	.+44     	; 0x130 <.L19>
+ 104:	83 30       	cpi	r24, 0x03	; 3
+ 106:	31 f0       	breq	.+12     	; 0x114 <.L20>
+ 108:	81 30       	cpi	r24, 0x01	; 1
+ 10a:	b1 f0       	breq	.+44     	; 0x138 <.L21>
+ 10c:	8b b3       	in	r24, 0x1b	; 27
+ 10e:	82 23       	and	r24, r18
+ 110:	8b bb       	out	0x1b, r24	; 27
+ 112:	08 95       	ret
+
+00000114 <.L20>:
+ 114:	82 b3       	in	r24, 0x12	; 18
+ 116:	82 23       	and	r24, r18
+ 118:	82 bb       	out	0x12, r24	; 18
+ 11a:	08 95       	ret
+
+0000011c <.L23>:
+ 11c:	82 30       	cpi	r24, 0x02	; 2
+ 11e:	c1 f0       	breq	.+48     	; 0x150 <.L16>
+ 120:	83 30       	cpi	r24, 0x03	; 3
+ 122:	91 f0       	breq	.+36     	; 0x148 <.L17>
+ 124:	81 30       	cpi	r24, 0x01	; 1
+ 126:	61 f0       	breq	.+24     	; 0x140 <.L18>
+ 128:	8b b3       	in	r24, 0x1b	; 27
+ 12a:	82 2b       	or	r24, r18
+ 12c:	8b bb       	out	0x1b, r24	; 27
+ 12e:	08 95       	ret
+
+00000130 <.L19>:
+ 130:	85 b3       	in	r24, 0x15	; 21
+ 132:	82 23       	and	r24, r18
+ 134:	85 bb       	out	0x15, r24	; 21
+ 136:	08 95       	ret
+
+00000138 <.L21>:
+ 138:	88 b3       	in	r24, 0x18	; 24
+ 13a:	82 23       	and	r24, r18
+ 13c:	88 bb       	out	0x18, r24	; 24
+ 13e:	08 95       	ret
+
+00000140 <.L18>:
+ 140:	88 b3       	in	r24, 0x18	; 24
+ 142:	82 2b       	or	r24, r18
+ 144:	88 bb       	out	0x18, r24	; 24
+ 146:	08 95       	ret
+
+00000148 <.L17>:
+ 148:	82 b3       	in	r24, 0x12	; 18
+ 14a:	82 2b       	or	r24, r18
+ 14c:	82 bb       	out	0x12, r24	; 18
+ 14e:	08 95       	ret
+
+00000150 <.L16>:
+ 150:	85 b3       	in	r24, 0x15	; 21
+ 152:	82 2b       	or	r24, r18
+ 154:	85 bb       	out	0x15, r24	; 21
+ 156:	08 95       	ret
+
+00000158 <DIO_get_pin_value>:
+ 158:	84 30       	cpi	r24, 0x04	; 4
+ 15a:	88 f4       	brcc	.+34     	; 0x17e <.L30>
+ 15c:	68 30       	cpi	r22, 0x08	; 8
+ 15e:	78 f4       	brcc	.+30     	; 0x17e <.L30>
+ 160:	82 30       	cpi	r24, 0x02	; 2
+ 162:	09 f1       	breq	.+66     	; 0x1a6 <.L26>
+ 164:	83 30       	cpi	r24, 0x03	; 3
+ 166:	b1 f0       	breq	.+44     	; 0x194 <.L27>
+ 168:	81 30       	cpi	r24, 0x01	; 1
+ 16a:	59 f0       	breq	.+22     	; 0x182 <.L28>
+ 16c:	89 b3       	in	r24, 0x19	; 25
+ 16e:	90 e0       	ldi	r25, 0x00	; 0
+ 170:	02 c0       	rjmp	.+4      	; 0x176 <.L2^B3>
+
+00000172 <.L1^B3>:
+ 172:	95 95       	asr	r25
+ 174:	87 95       	ror	r24
+
+00000176 <.L2^B3>:
+ 176:	6a 95       	dec	r22
+ 178:	e2 f7       	brpl	.-8      	; 0x172 <.L1^B3>
+ 17a:	81 70       	andi	r24, 0x01	; 1
+ 17c:	08 95       	ret
+
+0000017e <.L30>:
+ 17e:	80 e0       	ldi	r24, 0x00	; 0
+ 180:	08 95       	ret
+
+00000182 <.L28>:
+ 182:	86 b3       	in	r24, 0x16	; 22
+ 184:	90 e0       	ldi	r25, 0x00	; 0
+ 186:	02 c0       	rjmp	.+4      	; 0x18c <.L2^B4>
+
+00000188 <.L1^B4>:
+ 188:	95 95       	asr	r25
+ 18a:	87 95       	ror	r24
+
+0000018c <.L2^B4>:
+ 18c:	6a 95       	dec	r22
+ 18e:	e2 f7       	brpl	.-8      	; 0x188 <.L1^B4>
+ 190:	81 70       	andi	r24, 0x01	; 1
+ 192:	08 95       	ret
+
+00000194 <.L27>:
+ 194:	80 b3       	in	r24, 0x10	; 16
+ 196:	90 e0       	ldi	r25, 0x00	; 0
+ 198:	02 c0       	rjmp	.+4      	; 0x19e <.L2^B5>
+
+0000019a <.L1^B5>:
+ 19a:	95 95       	asr	r25
+ 19c:	87 95       	ror	r24
+
+0000019e <.L2^B5>:
+ 19e:	6a 95       	dec	r22
+ 1a0:	e2 f7       	brpl	.-8      	; 0x19a <.L1^B5>
+ 1a2:	81 70       	andi	r24, 0x01	; 1
+ 1a4:	08 95       	ret
+
+000001a6 <.L26>:
+ 1a6:	83 b3       	in	r24, 0x13	; 19
+ 1a8:	90 e0       	ldi	r25, 0x00	; 0
+ 1aa:	02 c0       	rjmp	.+4      	; 0x1b0 <.L2^B6>
+
+000001ac <.L1^B6>:
+ 1ac:	95 95       	asr	r25
+ 1ae:	87 95       	ror	r24
+
+000001b0 <.L2^B6>:
+ 1b0:	6a 95       	dec	r22
+ 1b2:	e2 f7       	brpl	.-8      	; 0x1ac <.L1^B6>
+ 1b4:	81 70       	andi	r24, 0x01	; 1
+ 1b6:	08 95       	ret
+
+000001b8 <DIO_tog_pin>:
+ 1b8:	84 30       	cpi	r24, 0x04	; 4
+ 1ba:	a0 f4       	brcc	.+40     	; 0x1e4 <.L31>
+ 1bc:	68 30       	cpi	r22, 0x08	; 8
+ 1be:	90 f4       	brcc	.+36     	; 0x1e4 <.L31>
+ 1c0:	21 e0       	ldi	r18, 0x01	; 1
+ 1c2:	01 c0       	rjmp	.+2      	; 0x1c6 <.L2^B7>
+
+000001c4 <.L1^B7>:
+ 1c4:	22 0f       	add	r18, r18
+
+000001c6 <.L2^B7>:
+ 1c6:	6a 95       	dec	r22
+ 1c8:	ea f7       	brpl	.-6      	; 0x1c4 <.L1^B7>
+ 1ca:	82 30       	cpi	r24, 0x02	; 2
+ 1cc:	61 f0       	breq	.+24     	; 0x1e6 <.L33>
+ 1ce:	83 30       	cpi	r24, 0x03	; 3
+ 1d0:	31 f0       	breq	.+12     	; 0x1de <.L34>
+ 1d2:	81 30       	cpi	r24, 0x01	; 1
+ 1d4:	61 f0       	breq	.+24     	; 0x1ee <.L35>
+ 1d6:	8b b3       	in	r24, 0x1b	; 27
+ 1d8:	82 27       	eor	r24, r18
+ 1da:	8b bb       	out	0x1b, r24	; 27
+ 1dc:	08 95       	ret
+
+000001de <.L34>:
+ 1de:	82 b3       	in	r24, 0x12	; 18
+ 1e0:	82 27       	eor	r24, r18
+ 1e2:	82 bb       	out	0x12, r24	; 18
+
+000001e4 <.L31>:
+ 1e4:	08 95       	ret
+
+000001e6 <.L33>:
+ 1e6:	85 b3       	in	r24, 0x15	; 21
+ 1e8:	82 27       	eor	r24, r18
+ 1ea:	85 bb       	out	0x15, r24	; 21
+ 1ec:	08 95       	ret
+
+000001ee <.L35>:
+ 1ee:	88 b3       	in	r24, 0x18	; 24
+ 1f0:	82 27       	eor	r24, r18
+ 1f2:	88 bb       	out	0x18, r24	; 24
+ 1f4:	08 95       	ret
+
+000001f6 <DIO_set_group_direction>:
+ 1f6:	84 30       	cpi	r24, 0x04	; 4
+ 1f8:	48 f4       	brcc	.+18     	; 0x20c <.L36>
+ 1fa:	82 30       	cpi	r24, 0x02	; 2
+ 1fc:	51 f0       	breq	.+20     	; 0x212 <.L38>
+ 1fe:	83 30       	cpi	r24, 0x03	; 3
+ 200:	21 f0       	breq	.+8      	; 0x20a <.L39>
+ 202:	81 30       	cpi	r24, 0x01	; 1
+ 204:	21 f0       	breq	.+8      	; 0x20e <.L40>
+ 206:	6a bb       	out	0x1a, r22	; 26
+ 208:	08 95       	ret
+
+0000020a <.L39>:
+ 20a:	61 bb       	out	0x11, r22	; 17
+
+0000020c <.L36>:
+ 20c:	08 95       	ret
+
+0000020e <.L40>:
+ 20e:	67 bb       	out	0x17, r22	; 23
+ 210:	08 95       	ret
+
+00000212 <.L38>:
+ 212:	64 bb       	out	0x14, r22	; 20
+ 214:	08 95       	ret
+
+00000216 <DIO_set_group_value>:
+ 216:	84 30       	cpi	r24, 0x04	; 4
+ 218:	48 f4       	brcc	.+18     	; 0x22c <.L41>
+ 21a:	82 30       	cpi	r24, 0x02	; 2
+ 21c:	51 f0       	breq	.+20     	; 0x232 <.L43>
+ 21e:	83 30       	cpi	r24, 0x03	; 3
+ 220:	21 f0       	breq	.+8      	; 0x22a <.L44>
+ 222:	81 30       	cpi	r24, 0x01	; 1
+ 224:	21 f0       	breq	.+8      	; 0x22e <.L45>
+ 226:	6b bb       	out	0x1b, r22	; 27
+ 228:	08 95       	ret
+
+0000022a <.L44>:
+ 22a:	62 bb       	out	0x12, r22	; 18
+
+0000022c <.L41>:
+ 22c:	08 95       	ret
+
+0000022e <.L45>:
+ 22e:	68 bb       	out	0x18, r22	; 24
+ 230:	08 95       	ret
+
+00000232 <.L43>:
+ 232:	65 bb       	out	0x15, r22	; 21
+ 234:	08 95       	ret
+
+00000236 <DIO_get_group_value>:
+ 236:	84 30       	cpi	r24, 0x04	; 4
+ 238:	40 f4       	brcc	.+16     	; 0x24a <.L51>
+ 23a:	82 30       	cpi	r24, 0x02	; 2
+ 23c:	51 f0       	breq	.+20     	; 0x252 <.L48>
+ 23e:	83 30       	cpi	r24, 0x03	; 3
+ 240:	51 f0       	breq	.+20     	; 0x256 <.L49>
+ 242:	81 30       	cpi	r24, 0x01	; 1
+ 244:	21 f0       	breq	.+8      	; 0x24e <.L50>
+ 246:	89 b3       	in	r24, 0x19	; 25
+ 248:	08 95       	ret
+
+0000024a <.L51>:
+ 24a:	80 e0       	ldi	r24, 0x00	; 0
+ 24c:	08 95       	ret
+
+0000024e <.L50>:
+ 24e:	86 b3       	in	r24, 0x16	; 22
+ 250:	08 95       	ret
+
+00000252 <.L48>:
+ 252:	83 b3       	in	r24, 0x13	; 19
+ 254:	08 95       	ret
+
+00000256 <.L49>:
+ 256:	80 b3       	in	r24, 0x10	; 16
+ 258:	08 95       	ret
+
+0000025a <main>:
+ 25a:	41 e0       	ldi	r20, 0x01	; 1
+ 25c:	60 e0       	ldi	r22, 0x00	; 0
+ 25e:	80 e0       	ldi	r24, 0x00	; 0
+ 260:	0e 94 36 00 	call	0x6c	; 0x6c <DIO_set_pin_direction>
+
+00000264 <.L2>:
+ 264:	60 e0       	ldi	r22, 0x00	; 0
+ 266:	80 e0       	ldi	r24, 0x00	; 0
+ 268:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <DIO_tog_pin>
+ 26c:	2f ef       	ldi	r18, 0xFF	; 255
+ 26e:	84 e3       	ldi	r24, 0x34	; 52
+ 270:	9c e0       	ldi	r25, 0x0C	; 12
+
+00000272 <.L1^B1>:
+ 272:	21 50       	subi	r18, 0x01	; 1
+ 274:	80 40       	sbci	r24, 0x00	; 0
+ 276:	90 40       	sbci	r25, 0x00	; 0
+ 278:	e1 f7       	brne	.-8      	; 0x272 <.L1^B1>
+ 27a:	00 c0       	rjmp	.+0      	; 0x27c <L0^A>
+
+0000027c <L0^A>:
+ 27c:	00 00       	nop
+ 27e:	f2 cf       	rjmp	.-28     	; 0x264 <.L2>
+
+00000280 <_exit>:
+ 280:	f8 94       	cli
+
+00000282 <__stop_program>:
+ 282:	ff cf       	rjmp	.-2      	; 0x282 <__stop_program>
