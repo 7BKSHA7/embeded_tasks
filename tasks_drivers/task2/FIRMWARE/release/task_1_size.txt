@@ -1,2 +1,0 @@
-   text	   data	    bss	    dec	    hex	filename
-    644	      0	      0	    644	    284	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task1\FIRMWARE\release\task_1.elf

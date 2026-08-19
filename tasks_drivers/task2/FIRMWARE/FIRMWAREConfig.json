@@ -1,8 +1,8 @@
 {
   "projectName": "FIRMWARE",
-  "projectPath": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task1\\FIRMWARE",
-  "outputPath": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task1\\FIRMWARE",
-  "outputName": "task_1",
+  "projectPath": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task2\\FIRMWARE",
+  "outputPath": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task2\\FIRMWARE",
+  "outputName": "task_2",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
@@ -25,6 +25,6 @@
   "port": "COM5 - Standard Serial over Bluetooth link (COM5)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task1\\FIRMWARE/task_1.hex",
+  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task2\\FIRMWARE/task_2.hex",
   "programmer": "usbasp"
 }

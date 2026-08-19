@@ -24,7 +24,7 @@
 #define FlagUp    1
 #define FlagDown  0
 
-#define ClearRegister   0x00
+#define clear_register   0x00
 
 #define F_CPU   8000000UL
 
