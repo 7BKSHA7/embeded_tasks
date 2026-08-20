@@ -1,44 +1,14 @@
 <circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="28,-156" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../embeded_tasks/tasks_drivers/task3/FIRMWARE/release/task_3.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="TCCR0,TCNT0,TIMSK,ADCH,ADCL,ADCSRA,ACSR,ADMUX,OCR0,PINB,PORTB,DDRB" MainMcu="false" SerialMon="-1" />
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="28,-156" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../FIRMWARE/release/task_3.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="TCCR0,TCNT0,TIMSK,ADCH,ADCL,ADCSRA,ACSR,ADMUX,OCR0,PINB,PORTB,DDRB" MainMcu="false" SerialMon="-1" />
 
 <item itemtype="Fixed Voltage" CircId="Fixed Voltage-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-44,-84" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-2" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
-
-<item itemtype="Potentiometer" CircId="Potentiometer-18" mainComp="false" ShowProp="Scale" Show_id="false" Show_Val="true" Pos="-208,28" rotation="0" hflip="1" vflip="1" label="Potentiometer-18" idLabPos="-16,-40" labelrot="0" valLabPos="19.788,-22.1764" valLabRot="0" Resistance="1024 Ω" Value_Ohm="22.528 Ω" Slider="true" Scale="1" />
-
-<item itemtype="Fixed Voltage" CircId="Fixed Voltage-20" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,-16" rotation="90" hflip="1" vflip="1" label="Fixed Voltage-20" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
-
-<item itemtype="Ground" CircId="Ground-23" mainComp="false" Show_id="false" Show_Val="false" Pos="-264,-20" rotation="180" hflip="1" vflip="1" label="Ground-23" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
-
-<item itemtype="MCU" CircId="mega32-24" mainComp="false" Show_id="true" Show_Val="false" Pos="-344,52" rotation="0" hflip="1" vflip="1" label="mega32-24" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="TCCR0,TCNT0,TIMSK,ADCH,ADCL,ADCSRA,ACSR,ADMUX,OCR0" MainMcu="true" SerialMon="-1" />
-
-<item itemtype="Ground" CircId="Ground-25" mainComp="false" Show_id="false" Show_Val="false" Pos="-252,124" rotation="270" hflip="1" vflip="1" label="Ground-25" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
-
-<item itemtype="Fixed Voltage" CircId="Fixed Voltage-27" mainComp="false" Show_id="false" Show_Val="false" Pos="-232,144" rotation="180" hflip="1" vflip="1" label="Fixed Voltage-27" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
-
-<item itemtype="Led" CircId="Led-28" mainComp="false" Show_id="false" Show_Val="false" Pos="-412,60" rotation="180" hflip="1" vflip="1" label="Led-28" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
-
-<item itemtype="Fixed Voltage" CircId="Fixed Voltage-29" mainComp="false" Show_id="false" Show_Val="false" Pos="-416,124" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-29" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
 
 <item itemtype="AudioOut" CircId="AudioOut-65" mainComp="false" Show_id="false" Show_Val="false" Pos="-24,-208" rotation="270" hflip="1" vflip="1" label="AudioOut-65" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="true" Impedance="8 Ω" Frequency="100 Hz" />
 
 <item itemtype="Ground" CircId="Ground-66" mainComp="false" Show_id="false" Show_Val="false" Pos="-16,-164" rotation="0" hflip="1" vflip="1" label="Ground-66" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
 <item itemtype="Connector" uid="Connector-1" startpinid="Fixed Voltage-2-outnod" endpinid="mega32-1-RST" pointList="-28,-84,20,-84" />
-
-<item itemtype="Connector" uid="Connector-51" startpinid="mega32-24-PORTB3" endpinid="Led-28-lPin" pointList="-352,84,-396,84,-396,60" />
-
-<item itemtype="Connector" uid="Connector-54" startpinid="Fixed Voltage-29-outnod" endpinid="mega32-24-RST" pointList="-400,124,-352,124" />
-
-<item itemtype="Connector" uid="Connector-50" startpinid="Ground-25-Gnd" endpinid="mega32-24-PORTV1" pointList="-268,124,-288,124" />
-
-<item itemtype="Connector" uid="Connector-56" startpinid="Fixed Voltage-27-outnod" endpinid="mega32-24-PORTV0" pointList="-248,144,-288,144,-288,140" />
-
-<item itemtype="Connector" uid="Connector-61" startpinid="Fixed Voltage-20-outnod" endpinid="Potentiometer-18-PinB" pointList="-180,0,-180,28,-192,28" />
-
-<item itemtype="Connector" uid="Connector-60" startpinid="Potentiometer-18-PinA" endpinid="Ground-23-Gnd" pointList="-224,28,-264,28,-264,-4" />
-
-<item itemtype="Connector" uid="Connector-107" startpinid="Potentiometer-18-PinM" endpinid="mega32-24-PORTA0" pointList="-208,44,-208,60,-288,60" />
 
 <item itemtype="Connector" uid="Connector-135" startpinid="AudioOut-65-rPin" endpinid="Ground-66-Gnd" pointList="-24,-192,-24,-180,-16,-180" />
 

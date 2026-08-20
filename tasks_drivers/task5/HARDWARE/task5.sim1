@@ -1,0 +1,39 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="28,-156" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../FIRMWARE/release/task_5.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="TCCR0,TCNT0,TIMSK,ADCH,ADCL,ADCSRA,ACSR,ADMUX,OCR0,PINB,PORTB,DDRB" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-44,-84" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-2" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="DcMotor" CircId="DcMotor-81" mainComp="false" Show_id="true" Show_Val="false" Pos="48,-216" rotation="720" hflip="1" vflip="1" label="DcMotor-81" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Subcircuit" CircId="L298P-84" mainComp="false" Show_id="true" Show_Val="false" Pos="-72,-220" rotation="0" hflip="1" vflip="1" label="L298P-84" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" Logic_Symbol="true" />
+
+<item itemtype="Ground" CircId="Ground-86" mainComp="false" Show_id="false" Show_Val="false" Pos="-24,-40" rotation="0" hflip="1" vflip="1" label="Ground-86" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-85" mainComp="false" Pos="-12,-84" />
+
+<item itemtype="Node" CircId="Node-87" mainComp="false" Pos="-24,-156" />
+
+<item itemtype="Connector" uid="Connector-147" startpinid="mega32-1-PORTB3" endpinid="L298P-84-EnA" pointList="20,-124,-92,-124,-92,-172,-80,-172" />
+
+<item itemtype="Connector" uid="Connector-150" startpinid="L298P-84-OUT1" endpinid="DcMotor-81-lPin" pointList="-32,-212,8,-212,8,-216" />
+
+<item itemtype="Connector" uid="Connector-151" startpinid="L298P-84-OUT2" endpinid="DcMotor-81-rPin" pointList="-32,-204,-32,-184,96,-184,96,-216,88,-216" />
+
+<item itemtype="Connector" uid="Connector-152" startpinid="mega32-1-PORTB0" endpinid="L298P-84-IN1" pointList="20,-148,20,-144,-104,-144,-104,-212,-80,-212" />
+
+<item itemtype="Connector" uid="Connector-153" startpinid="mega32-1-PORTB1" endpinid="L298P-84-IN2" pointList="20,-140,-112,-140,-112,-204,-80,-204" />
+
+<item itemtype="Connector" uid="Connector-154" startpinid="Node-85-1" endpinid="L298P-84-Vs" pointList="-12,-84,-12,-172,-32,-172" />
+
+<item itemtype="Connector" uid="Connector-155" startpinid="Fixed Voltage-2-outnod" endpinid="Node-85-0" pointList="-28,-84,-12,-84" />
+
+<item itemtype="Connector" uid="Connector-156" startpinid="Node-85-2" endpinid="mega32-1-RST" pointList="-12,-84,20,-84" />
+
+<item itemtype="Connector" uid="Connector-158" startpinid="Node-87-1" endpinid="L298P-84-SenB" pointList="-24,-156,-32,-156" />
+
+<item itemtype="Connector" uid="Connector-159" startpinid="Ground-86-Gnd" endpinid="Node-87-0" pointList="-24,-56,-24,-156" />
+
+<item itemtype="Connector" uid="Connector-160" startpinid="Node-87-2" endpinid="L298P-84-SenA" pointList="-24,-156,-24,-164,-32,-164" />
+
+</circuit>

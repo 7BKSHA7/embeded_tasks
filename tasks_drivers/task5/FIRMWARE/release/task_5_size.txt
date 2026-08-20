@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1984	      0	      6	   1990	    7c6	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task5\FIRMWARE\release\task_5.elf

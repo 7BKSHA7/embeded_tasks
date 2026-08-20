@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   2016	      0	      8	   2024	    7e8	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task6\FIRMWARE\release\task_6.elf

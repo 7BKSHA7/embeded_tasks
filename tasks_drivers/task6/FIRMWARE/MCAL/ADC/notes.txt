@@ -1,0 +1,63 @@
+what is the ADC : (page 201)
+    • ADC stands for ANALOG TO DIGTAL converter 
+    • 10-bit Resolution 
+        _> this means the adc counts from 0 to 1023 (2^10) {0x000 -> 0x3FF}
+        why is that improtnat ? 
+            to calcualte Voltage step where its ==> V_ref / 1024 
+                = 4.88 mV 
+
+    • 0.5 LSB Integral Non-linearity    
+        _> the ADC values are someitmes off so this helps it correct it using a 0.5 LSB
+            where the lsb was 4.88 so half of that 
+            basicaly is just makes it more accurate
+
+    • ±2 LSB Absolute Accuracy
+        _> what is it 
+            It tells us the maximum overall error of the ADC reading
+        and the ±2 ? 
+            well it can go 2 steps up or down
+
+    • 13 µs - 260 µs Conversion Time
+        how fast we can get reading abart from each other
+
+    • Up to 15 kSPS at Maximum Resolution
+        means 15000 samples per secound 
+        it tells us how fast the adc can sample 
+
+    • 8 Multiplexed Single Ended Input Channels
+        means from ADC0 to ADC7
+        and it uses 1 converter 
+        single eneded : means it measures the value realative to GROUND 
+
+    • 7 Differential Input Channels
+        The ADC can measure the difference between two input voltages, instead of measuring one voltage aginst GROUND
+        so it does V_1 - V_2 
+
+    • 2 Differential Input Channels with Optional Gain of 10x and 200x
+        this can amplify the differnce between to channcel to 10x or 200x 
+
+    • Optional Left adjustment for ADC Result Readout
+        left adujust to but it in a 16bit register 
+
+    • 0 - VCC ADC Input Voltage Range <<=== range from 0 to 5
+
+    • Selectable 2.56V ADC Reference Voltage
+
+    • Free Running or Single Conversion Mode
+        Single Conversion: You tell the ADC to take one reading, then it stops.
+        Free Running: The ADC keeps taking readings continuously, one after another.
+
+    • ADC Start Conversion by Auto Triggering on Interrupt Sources
+        auto Triggering means it just starts when an event happens
+        and an Interrupt just when you tell it when or make an Interrupt related to it to make it starts
+
+    • Interrupt on ADC Conversion Complete
+        when the adc conversion is done it just does an Interrupt
+
+    • Sleep Mode Noise Canceler
+        reduce electrical noise 
+        less noise -> cleaner output values 
+
+    ADC clock/prescaler → controls conversion timing
+    
+    rule : V_in * 1024 / V_ref

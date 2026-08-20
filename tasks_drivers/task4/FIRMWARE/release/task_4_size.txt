@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1718	      0	      6	   1724	    6bc	C:\Users\beshoy\Desktop\embeded_tasks\tasks_drivers\task4\FIRMWARE\release\task_4.elf

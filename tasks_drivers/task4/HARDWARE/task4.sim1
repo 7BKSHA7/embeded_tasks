@@ -1,0 +1,21 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega32-1" mainComp="false" Show_id="true" Show_Val="false" Pos="28,-156" rotation="0" hflip="1" vflip="1" label="mega32-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../FIRMWARE/release/task_4.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="TCCR0,TCNT0,TIMSK,ADCH,ADCL,ADCSRA,ACSR,ADMUX,OCR0,PINB,PORTB,DDRB" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-64,-80" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-2" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Led" CircId="Led-67" mainComp="false" Show_id="false" Show_Val="false" Pos="-24,-124" rotation="180" hflip="1" vflip="1" label="Led-67" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Switch" CircId="Switch-68" mainComp="false" Show_id="false" Show_Val="false" Pos="-20,-28" rotation="0" hflip="1" vflip="1" label="Switch-68" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-70" mainComp="false" Show_id="false" Show_Val="false" Pos="-76,-28" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-70" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Connector" uid="Connector-145" startpinid="Led-67-lPin" endpinid="mega32-1-PORTB3" pointList="-8,-124,20,-124" />
+
+<item itemtype="Connector" uid="Connector-146" startpinid="Switch-68-switch0pinN" endpinid="mega32-1-PORTD2" pointList="-4,-28,20,-28" />
+
+<item itemtype="Connector" uid="Connector-150" startpinid="Fixed Voltage-2-outnod" endpinid="mega32-1-RST" pointList="-48,-80,-20,-80,-20,-84,20,-84" />
+
+<item itemtype="Connector" uid="Connector-151" startpinid="Fixed Voltage-70-outnod" endpinid="Switch-68-pinP0" pointList="-60,-28,-36,-28" />
+
+</circuit>
