@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1716	      0	      6	   1722	    6ba	C:\Users\Administrator\Desktop\embeded_tasks\tasks_drivers\task4\FIRMWARE\release\test_4.elf

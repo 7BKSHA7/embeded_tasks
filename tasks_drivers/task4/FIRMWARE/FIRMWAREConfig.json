@@ -1,8 +1,8 @@
 {
   "projectName": "FIRMWARE",
-  "projectPath": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task4\\FIRMWARE",
-  "outputPath": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task4\\FIRMWARE",
-  "outputName": "task_4",
+  "projectPath": "C:\\Users\\Administrator\\Desktop\\embeded_tasks\\tasks_drivers\\task4\\FIRMWARE",
+  "outputPath": "C:\\Users\\Administrator\\Desktop\\embeded_tasks\\tasks_drivers\\task4\\FIRMWARE",
+  "outputName": "test_4",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
@@ -22,9 +22,9 @@
   "debugLevel": "g2",
   "debugFormat": "dwarf-2",
   "interfaceType": "SPI",
-  "port": "COM5 - Standard Serial over Bluetooth link (COM5)",
+  "port": "COM3 - Standard Serial over Bluetooth link (COM3)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\embeded_tasks\\tasks_drivers\\task4\\FIRMWARE/task_4.hex",
+  "firmwareFile": "C:\\Users\\Administrator\\Desktop\\embeded_tasks\\tasks_drivers\\task4\\FIRMWARE/test_4.hex",
   "programmer": "usbasp"
 }

@@ -17,7 +17,7 @@ void main()
         {
             DIO_set_pin_value(Dio_groupB, Dio_pin3 , high);
         }
-        else if (sensor_state == low)
+        else
         {
             DIO_set_pin_value(Dio_groupB, Dio_pin3 , low);
         }
