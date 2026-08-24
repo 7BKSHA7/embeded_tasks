@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+    710	      0	      0	    710	    2c6	C:\Users\Administrator\Desktop\embeded_tasks\PIR_task\FIRMWARE\release\pir.elf
