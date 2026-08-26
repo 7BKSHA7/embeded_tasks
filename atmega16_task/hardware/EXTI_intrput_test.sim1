@@ -1,0 +1,21 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega16-1" mainComp="false" Show_id="true" Show_Val="false" Pos="32,-116" rotation="0" hflip="1" vflip="1" label="mega16-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../software/release/atmega16_test.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList=",DDRD,DDRB,PORTD,PORTB,GICR,GIFR,MCUCR,MCUCSR" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-44,-44" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-4" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Led" CircId="Led-52" mainComp="false" Show_id="false" Show_Val="false" Pos="-28,-108" rotation="180" hflip="1" vflip="1" label="Led-52" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Push" CircId="Push-54" mainComp="false" Show_id="false" Show_Val="false" Pos="-28,12" rotation="0" hflip="1" vflip="1" label="Push-54" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-59" mainComp="false" Show_id="false" Show_Val="false" Pos="-96,12" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-59" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="Led-52-lPin" endpinid="mega16-1-PORTB0" pointList="-12,-108,24,-108" />
+
+<item itemtype="Connector" uid="Connector-93" startpinid="Push-54-switch0pinN" endpinid="mega16-1-PORTD2" pointList="-12,12,24,12" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Fixed Voltage-4-outnod" endpinid="mega16-1-RST" pointList="-28,-44,24,-44" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Fixed Voltage-59-outnod" endpinid="Push-54-pinP0" pointList="-80,12,-44,12" />
+
+</circuit>

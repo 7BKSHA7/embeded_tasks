@@ -1,0 +1,33 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega16-1" mainComp="false" Show_id="true" Show_Val="false" Pos="32,-116" rotation="0" hflip="1" vflip="1" label="mega16-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../Users/Administrator/Desktop/embeded_tasks/atmega16_task/software/release/atmega16_test.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Wdt_enabled="false" varList="ACSR,ADCH,ADCSRA,ADCL,ADMUX" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-44,-44" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-4" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-37" mainComp="false" Show_id="false" Show_Val="false" Pos="156,-28" rotation="180" hflip="1" vflip="1" label="Fixed Voltage-37" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-39" mainComp="false" Show_id="false" Show_Val="false" Pos="220,-52" rotation="270" hflip="1" vflip="1" label="Ground-39" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Capacitor" CircId="Capacitor-46" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="132,-52" rotation="0" hflip="1" vflip="1" label="Capacitor-46" idLabPos="-16,-24" labelrot="0" valLabPos="-15.6135,6" valLabRot="0" Capacitance="100 nF" Resistance="1 µΩ" InitVolt="0 V" ReaStep="0 ns" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-49" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="140,-172" rotation="0" hflip="1" vflip="1" label="Potentiometer-49" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="500 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-50" mainComp="false" Show_id="false" Show_Val="false" Pos="72,-172" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-50" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-51" mainComp="false" Show_id="false" Show_Val="false" Pos="200,-172" rotation="270" hflip="1" vflip="1" label="Ground-51" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Fixed Voltage-4-outnod" endpinid="mega16-1-RST" pointList="-28,-44,24,-44" />
+
+<item itemtype="Connector" uid="Connector-51" startpinid="Fixed Voltage-37-outnod" endpinid="mega16-1-PORTV0" pointList="140,-28,88,-28" />
+
+<item itemtype="Connector" uid="Connector-72" startpinid="Ground-39-Gnd" endpinid="Capacitor-46-rPin" pointList="204,-52,148,-52" />
+
+<item itemtype="Connector" uid="Connector-76" startpinid="Potentiometer-49-PinM" endpinid="mega16-1-PORTA0" pointList="140,-156,140,-108,88,-108" />
+
+<item itemtype="Connector" uid="Connector-77" startpinid="Fixed Voltage-50-outnod" endpinid="Potentiometer-49-PinA" pointList="88,-172,124,-172" />
+
+<item itemtype="Connector" uid="Connector-79" startpinid="Potentiometer-49-PinB" endpinid="Ground-51-Gnd" pointList="156,-172,184,-172" />
+
+<item itemtype="Connector" uid="Connector-80" startpinid="Capacitor-46-lPin" endpinid="mega16-1-PORTV1" pointList="116,-52,116,-44,88,-44" />
+
+</circuit>

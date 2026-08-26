@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1556	      0	      7	   1563	    61b	C:\Users\Administrator\Desktop\embeded_tasks\atmega16_task\software\release\atmega16_test.elf
