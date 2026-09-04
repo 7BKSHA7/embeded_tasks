@@ -2,30 +2,32 @@ Archive member included to satisfy reference by file (symbol)
 
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
                               C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o (exit)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+                              C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o (__do_copy_data)
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
-                              C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o (__do_clear_bss)
+                              C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o (__do_clear_bss)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                              C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o (__divsf3)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o) (__divsf3x)
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
                               C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o (__fixunssfsi)
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
                               C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o (__floatunsisf)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o) (__fp_inf)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o) (__fp_nan)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o) (__fp_pscA)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o) (__fp_pscB)
+C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o) (__fp_round)
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o) (__fp_splitA)
+                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o) (__fp_split3)
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
                               C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o) (__fp_zero)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                              C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o (__mulsf3)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_inf)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_nan)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_pscA)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_pscB)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                              C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__fp_round)
 
 There are no discarded input sections
 
@@ -44,6 +46,7 @@ user_signatures  0x00850000         0x00000400         rw!x
 Linker script and memory map
 
 LOAD C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+LOAD C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\LCD\LCD_program.c.o
 LOAD C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
 LOAD C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
 LOAD C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
@@ -155,7 +158,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x898
+.text           0x00000000      0xe22
  *(.vectors)
  .vectors       0x00000000       0x54 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -194,8 +197,10 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000060       0x10 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
-                0x00000060                __do_clear_bss
+ .init4         0x00000060       0x16 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -206,145 +211,163 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000070        0x8 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+ .init9         0x00000086        0x8 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
  *(.init9)
  *(.text)
- .text          0x00000078        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
-                0x00000078                __vector_1
-                0x00000078                __vector_12
-                0x00000078                __bad_interrupt
-                0x00000078                __vector_3
-                0x00000078                __vector_11
-                0x00000078                __vector_13
-                0x00000078                __vector_17
-                0x00000078                __vector_19
-                0x00000078                __vector_5
-                0x00000078                __vector_4
-                0x00000078                __vector_2
-                0x00000078                __vector_15
-                0x00000078                __vector_14
-                0x00000078                __vector_10
-                0x00000078                __vector_16
-                0x00000078                __vector_18
-                0x00000078                __vector_20
- .text          0x0000007c       0xfc C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
-                0x0000007c                ULTRASONIC_ISR_handler
-                0x000000b8                ULTRASONIC_init
-                0x0000010a                ULTRASONIC_trigger
-                0x00000126                ULTRASONIC_get_pulse_width
-                0x0000013c                ULTRASONIC_get_distance
- .text          0x00000178        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
- .text          0x00000178      0x1ee C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
-                0x00000178                DIO_set_pin_direction
-                0x000001ee                DIO_set_pin_value
-                0x00000264                DIO_get_pin_value
-                0x000002c4                DIO_tog_pin
-                0x00000302                DIO_set_group_direction
-                0x00000322                DIO_set_group_value
-                0x00000342                DIO_get_group_value
- .text          0x00000366       0x10 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\GIE\GIE_Program.c.o
-                0x00000366                GIE_Enable
-                0x0000036e                GIE_Disable
- .text          0x00000376      0x2aa C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\TIMER1\TIMER1_program.c.o
-                0x00000376                TIMER1_init
-                0x00000438                TIMER1_start
-                0x00000446                TIMER1_stop
-                0x0000044e                TIMER1_set_preload
-                0x00000454                TIMER1_set_compare_match
-                0x0000045a                TIMER1_set_input_capture_edge
-                0x00000470                TIMER1_enable_input_capture_interrupt
-                0x00000478                TIMER1_disable_input_capture_interrupt
-                0x00000480                TIMER1_get_input_capture_value
-                0x00000488                TIMER1_set_call_back_fucntion
-                0x000004d8                __vector_6
-                0x0000052a                __vector_7
-                0x0000057c                __vector_8
-                0x000005ce                __vector_9
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
- .text          0x00000620        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00000620                        . = ALIGN (0x2)
+ .text          0x0000008e        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+                0x0000008e                __vector_1
+                0x0000008e                __vector_12
+                0x0000008e                __bad_interrupt
+                0x0000008e                __vector_3
+                0x0000008e                __vector_11
+                0x0000008e                __vector_13
+                0x0000008e                __vector_17
+                0x0000008e                __vector_19
+                0x0000008e                __vector_5
+                0x0000008e                __vector_4
+                0x0000008e                __vector_2
+                0x0000008e                __vector_15
+                0x0000008e                __vector_14
+                0x0000008e                __vector_10
+                0x0000008e                __vector_16
+                0x0000008e                __vector_18
+                0x0000008e                __vector_20
+ .text          0x00000092      0x556 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\LCD\LCD_program.c.o
+                0x00000150                LCD_WriteData
+                0x0000022e                LCD_WriteCommand
+                0x0000028a                LCD_INIT
+                0x00000446                LCD_WriteString
+                0x0000048a                LCD_GoToXY
+                0x000004fa                LCD_WriteNUMBER
+ .text          0x000005e8       0xd0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
+                0x000005e8                ULTRASONIC_init
+                0x00000630                ULTRASONIC_get_distance
+ .text          0x000006b8        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
+ .text          0x000006b8      0x1ee C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
+                0x000006b8                DIO_set_pin_direction
+                0x0000072e                DIO_set_pin_value
+                0x000007a4                DIO_get_pin_value
+                0x00000804                DIO_tog_pin
+                0x00000842                DIO_set_group_direction
+                0x00000862                DIO_set_group_value
+                0x00000882                DIO_get_group_value
+ .text          0x000008a6       0x10 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\GIE\GIE_Program.c.o
+                0x000008a6                GIE_Enable
+                0x000008ae                GIE_Disable
+ .text          0x000008b6      0x2aa C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\TIMER1\TIMER1_program.c.o
+                0x000008b6                TIMER1_init
+                0x00000978                TIMER1_start
+                0x00000986                TIMER1_stop
+                0x0000098e                TIMER1_set_preload
+                0x00000994                TIMER1_set_compare_match
+                0x0000099a                TIMER1_set_input_capture_edge
+                0x000009b0                TIMER1_enable_input_capture_interrupt
+                0x000009b8                TIMER1_disable_input_capture_interrupt
+                0x000009c0                TIMER1_get_input_capture_value
+                0x000009c8                TIMER1_set_call_back_fucntion
+                0x00000a18                __vector_6
+                0x00000a6a                __vector_7
+                0x00000abc                __vector_8
+                0x00000b0e                __vector_9
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .text          0x00000b60        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00000b60                        . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x00000620       0x20 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
-                0x00000620                main
+ .text.startup  0x00000b60       0x60 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
+                0x00000b60                main
  .text.libgcc.mul
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x00000640        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000bc0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
  .text.avr-libc.fplib
-                0x00000640       0x5e C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00000640                __fixunssfsi
+                0x00000bc0        0x8 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00000bc0                __divsf3
  .text.avr-libc.fplib
-                0x0000069e       0x7a C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x0000069e                __floatunsisf
-                0x000006a2                __floatsisf
+                0x00000bc8       0xdc C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00000be8                __divsf3x
+                0x00000bee                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000718       0x44 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00000718                __fp_split3
-                0x00000728                __fp_splitA
+                0x00000ca4       0x5e C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00000ca4                __fixunssfsi
  .text.avr-libc.fplib
-                0x0000075c        0xe C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x0000075c                __fp_zero
-                0x0000075e                __fp_szero
+                0x00000d02       0x7a C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00000d02                __floatunsisf
+                0x00000d06                __floatsisf
  .text.avr-libc.fplib
-                0x0000076a        0x8 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x0000076a                __mulsf3
+                0x00000d7c        0xc C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00000d7c                __fp_inf
  .text.avr-libc.fplib
-                0x00000772       0xd2 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x00000790                __mulsf3x
-                0x00000796                __mulsf3_pse
+                0x00000d88        0x6 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00000d88                __fp_nan
  .text.avr-libc.fplib
-                0x00000844        0xc C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00000844                __fp_inf
+                0x00000d8e        0xe C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00000d8e                __fp_pscA
  .text.avr-libc.fplib
-                0x00000850        0x6 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00000850                __fp_nan
+                0x00000d9c        0xe C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00000d9c                __fp_pscB
  .text.avr-libc.fplib
-                0x00000856        0xe C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x00000856                __fp_pscA
+                0x00000daa       0x22 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00000daa                __fp_round
  .text.avr-libc.fplib
-                0x00000864        0xe C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00000864                __fp_pscB
+                0x00000dcc       0x44 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00000dcc                __fp_split3
+                0x00000ddc                __fp_splitA
  .text.avr-libc.fplib
-                0x00000872       0x22 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00000872                __fp_round
-                0x00000894                        . = ALIGN (0x2)
+                0x00000e10        0xe C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00000e10                __fp_zero
+                0x00000e12                __fp_szero
+                0x00000e1e                        . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000894        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
-                0x00000894                _exit
-                0x00000894                exit
+ .fini9         0x00000e1e        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000e1e                _exit
+                0x00000e1e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -363,80 +386,86 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000894        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000e1e        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
  *(.hightext)
  *(.hightext*)
  *(.progmemx.*)
-                0x00000898                        . = ALIGN (0x2)
+                0x00000e22                        . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
-                0x00000898                        _etext = .
+                0x00000e22                        _etext = .
 
-.data           0x00800060        0x0 load address 0x00000898
-                [!provide]                        PROVIDE (__data_start = .)
+.data           0x00800060       0x12 load address 0x00000e22
+                0x00800060                        PROVIDE (__data_start = .)
  *(.data)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+ .data          0x00800060        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\LCD\LCD_program.c.o
  .data          0x00800060        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
  .data          0x00800060        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
  .data          0x00800060        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
  .data          0x00800060        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\GIE\GIE_Program.c.o
  .data          0x00800060        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\TIMER1\TIMER1_program.c.o
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
- .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
- .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
- .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
- .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
  *(.data*)
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
+ .rodata.str1.1
+                0x00800060       0x12 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
  *(.gnu.linkonce.r*)
-                0x00800060                        . = ALIGN (0x2)
-                0x00800060                        _edata = .
-                [!provide]                        PROVIDE (__data_end = .)
+                0x00800072                        . = ALIGN (0x2)
+                0x00800072                        _edata = .
+                0x00800072                        PROVIDE (__data_end = .)
 
-.bss            0x00800060        0xd
-                0x00800060                        PROVIDE (__bss_start = .)
+.bss            0x00800072        0xa
+                0x00800072                        PROVIDE (__bss_start = .)
  *(.bss)
- .bss           0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
- .bss           0x00800060        0x5 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
- .bss           0x00800065        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
- .bss           0x00800065        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
- .bss           0x00800065        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\GIE\GIE_Program.c.o
- .bss           0x00800065        0x8 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\TIMER1\TIMER1_program.c.o
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
- .bss           0x0080006d        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .bss           0x00800072        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+ .bss           0x00800072        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\LCD\LCD_program.c.o
+ .bss           0x00800072        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
+ .bss           0x00800072        0x2 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
+ .bss           0x00800074        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
+ .bss           0x00800074        0x0 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\GIE\GIE_Program.c.o
+ .bss           0x00800074        0x8 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\TIMER1\TIMER1_program.c.o
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .bss           0x0080007c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
  *(.bss*)
  *(COMMON)
-                0x0080006d                        PROVIDE (__bss_end = .)
-                0x00000898                        __data_load_start = LOADADDR (.data)
-                0x00000898                        __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080007c                        PROVIDE (__bss_end = .)
+                0x00000e22                        __data_load_start = LOADADDR (.data)
+                0x00000e34                        __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080006d        0x0
+.noinit         0x0080007c        0x0
                 [!provide]                        PROVIDE (__noinit_start = .)
  *(.noinit .noinit.* .gnu.linkonce.n.*)
                 [!provide]                        PROVIDE (__noinit_end = .)
-                0x0080006d                        _end = .
+                0x0080007c                        _end = .
                 [!provide]                        PROVIDE (__heap_start = .)
                 0x00000000                        __flmap_init_label = DEFINED (__flmap_noinit_start)?__flmap_noinit_start:0x0
                 0x00000000                        __flmap = DEFINED (__flmap)?__flmap:0x0
@@ -477,8 +506,9 @@ END GROUP
 
 .comment        0x00000000       0x2f
  *(.comment)
- .comment       0x00000000       0x2f C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
+ .comment       0x00000000       0x2f C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\LCD\LCD_program.c.o
                                  0x30 (size before relaxing)
+ .comment       0x0000002f       0x30 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\HAL\ULTRASONIC\ULTRASONIC_program.c.o
  .comment       0x0000002f       0x30 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\main.c.o
  .comment       0x0000002f       0x30 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\DIO\DIO_program.c.o
  .comment       0x0000002f       0x30 C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\MCAL\GIE\GIE_Program.c.o
