@@ -56,7 +56,5 @@ u16 ULTRASONIC_get_distance(void)
     // time about is 58.3 uS
     // speed of sound in cm/μs
     // THE 5.8090379 IS FOR BETTER PRESCIOSN
-    return (u16)(echo_time / 5.8090379);
+    return (u16)(echo_time / 58.090379);
 }
-
-

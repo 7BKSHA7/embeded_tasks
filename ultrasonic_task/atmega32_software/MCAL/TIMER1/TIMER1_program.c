@@ -18,6 +18,7 @@ void TIMER1_init(timer1_config_t config) // timer config
         TCNT1H = (u8)(config.preload_value >> move_to_low_byte);
         TCNT1L = (u8)config.preload_value;        // enable interput 
         SetBit(TIMSK, Timer1_TOIE1);
+        SetBit(TIMSK, Timer1_TICIE1);
     }
     else if (config.timer_mode == Timer1_CTCMode) // to make it compare mode
     {

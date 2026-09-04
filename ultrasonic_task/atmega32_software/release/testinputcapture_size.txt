@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-   3618	     18	     10	   3646	    e3e	C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\testinputcapture.elf
+   3624	     18	     10	   3652	    e44	C:\Users\Administrator\Desktop\embeded_tasks\ultrasonic_task\atmega32_software\release\testinputcapture.elf
